@@ -1,13 +1,63 @@
+@font-face {
+  font-family: "MechanismoRegular";
+  src: local("MechanismoRegular"), url(./fonts/MechanismoRegular-p7ywa.otf) format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: MechanismoRegular !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body:after, body:before {
+  content: "";
+  will-change: top left;
+  backface-visibility: hidden;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #fff;
+  z-index: 20000;
+}
+
+body:after {
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+body:before {
+  bottom: 0;
+  top: 0;
+}
+
+html:after, html:before {
+  content: "";
+  will-change: top left;
+  backface-visibility: hidden;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  background: #fff;
+  z-index: 21000;
+}
+
+html:after {
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+html:before {
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: MechanismoRegular,source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
